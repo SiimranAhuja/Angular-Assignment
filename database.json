@@ -1,0 +1,396 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "user1",
+      "password": "pass121",
+      "email": "user1@example.com",
+      "role": "tenant"
+    },
+    {
+      "id": "2",
+      "username": "user2",
+      "password": "user2pass",
+      "email": "user2@example.com",
+      "role": "tenant"
+    },
+    {
+      "id": "3",
+      "username": "roy",
+      "password": "roy@123",
+      "email": "roy@123.com",
+      "role": "owner"
+    },
+    {
+      "id": "b4ab",
+      "username": "simran",
+      "password": "simran@123",
+      "email": "simran@123.com",
+      "role": "owner"
+    },
+    {
+      "id": "5513",
+      "username": "shubham",
+      "password": "shubham711",
+      "email": "shubham@711.com",
+      "role": "tenant"
+    },
+    {
+      "id": "17b0",
+      "username": "test",
+      "password": "test@123",
+      "email": "test@123.com",
+      "role": "tenant"
+    }
+  ],
+  "properties": [
+    {
+      "id": "8a65",
+      "type": "Apartment",
+      "shared": "true",
+      "address": "Guru Nanak Nagar",
+      "squareFeet": 123,
+      "stay": "Short Term",
+      "rent": 15000,
+      "negotiable": false,
+      "perMonth": true,
+      "utilitiesIncluded": true,
+      "furnished": "true",
+      "amenities": [
+        {
+          "id": 1,
+          "name": "CarPark"
+        },
+        {
+          "id": 2,
+          "name": "VisitorsParking"
+        },
+        {
+          "id": 3,
+          "name": "PowerBackup"
+        },
+        {
+          "id": 4,
+          "name": "GarbageDisposal"
+        },
+        {
+          "id": 5,
+          "name": "WaterHeater"
+        }
+      ],
+      "title": "2 BHK in Guru Nanak Nagar",
+      "description": "A well furnished 2 bhk in Guru Nanak Nagar with good metro connectivity with good security system and in elite people society. Here you will have a peaceful life away from city pollution and noises, it is situated in very green lucious area.",
+      "ownerId": "b4ab"
+    },
+    {
+      "id": "d090",
+      "type": "Apartment",
+      "shared": "true",
+      "address": "Chanakyapuri",
+      "squareFeet": 120,
+      "stay": "Both",
+      "rent": 25000,
+      "negotiable": false,
+      "perMonth": true,
+      "utilitiesIncluded": true,
+      "furnished": "true",
+      "amenities": [
+        {
+          "id": 1,
+          "name": "CarPark"
+        },
+        {
+          "id": 2,
+          "name": "VisitorsParking"
+        },
+        {
+          "id": 3,
+          "name": "PowerBackup"
+        },
+        {
+          "id": 4,
+          "name": "GarbageDisposal"
+        },
+        {
+          "id": 5,
+          "name": "PrivateLawn"
+        },
+        {
+          "id": 6,
+          "name": "WaterHeater"
+        },
+        {
+          "id": 7,
+          "name": "SecuritySystem"
+        },
+        {
+          "id": 8,
+          "name": "LaundryService"
+        },
+        {
+          "id": 9,
+          "name": "Elevator"
+        }
+      ],
+      "title": "2 BHK in Chanakyapuri",
+      "description": "A well furnished 2 bhk in Chanakyapuri with good metro connectivity with good security system and in elite people society. when an unknown printer took a galley of type and scrambled it to make a type specimen book.  when an unknown printer took.",
+      "ownerId": "b4ab"
+    },
+    {
+      "id": "eee3",
+      "type": "Apartment",
+      "shared": "true",
+      "address": "Tilak Nagar",
+      "squareFeet": 68,
+      "stay": "Short Term",
+      "rent": 20000,
+      "negotiable": false,
+      "perMonth": true,
+      "utilitiesIncluded": false,
+      "furnished": "true",
+      "amenities": [
+        {
+          "id": 1,
+          "name": "CarPark"
+        },
+        {
+          "id": 2,
+          "name": "VisitorsParking"
+        },
+        {
+          "id": 3,
+          "name": "WaterHeater"
+        },
+        {
+          "id": 4,
+          "name": "SecuritySystem"
+        }
+      ],
+      "title": "1 Rk in Tilak Nagar",
+      "description": "This is a fully furnished 1 RK in Tilak Nagar with all the necessities required, good connectivity with metro and situated in secured and good society made ENG builder. Price is negotiable and all the appliances and furniture is in good state. ",
+      "ownerId": "b4ab"
+    },
+    {
+      "id": "fd02",
+      "type": "Apartment",
+      "shared": "true",
+      "address": "Punjabi Bagh",
+      "squareFeet": 123,
+      "stay": "Short Term",
+      "rent": 50000,
+      "negotiable": false,
+      "perMonth": true,
+      "utilitiesIncluded": true,
+      "furnished": "true",
+      "amenities": [
+        {
+          "id": 1,
+          "name": "SwimmingPool"
+        },
+        {
+          "id": 2,
+          "name": "CarPark"
+        },
+        {
+          "id": 3,
+          "name": "VisitorsParking"
+        },
+        {
+          "id": 4,
+          "name": "PowerBackup"
+        },
+        {
+          "id": 5,
+          "name": "GarbageDisposal"
+        },
+        {
+          "id": 6,
+          "name": "WaterHeater"
+        }
+      ],
+      "title": "3 BHK in Punjabi Bagh",
+      "description": "Punjabi Bagh is well connected to the places such as Kormangala, HSR, Silk Board, Marathalli, Bellandur, Whitefield, Electronic City and Outer Ring Road. The project has 85% open space and sustainable design for an elevated living.The project ensures optimal ventilation",
+      "ownerId": "b4ab"
+    },
+    {
+      "id": "7875",
+      "type": "Building",
+      "shared": "true",
+      "address": "Saket",
+      "squareFeet": 45,
+      "stay": "Long Term (6+ Months)",
+      "rent": 15000,
+      "negotiable": true,
+      "perMonth": true,
+      "utilitiesIncluded": true,
+      "furnished": "false",
+      "amenities": [
+        {
+          "id": 1,
+          "name": "CarPark"
+        },
+        {
+          "id": 2,
+          "name": "VisitorsParking"
+        },
+        {
+          "id": 3,
+          "name": "PowerBackup"
+        },
+        {
+          "id": 4,
+          "name": "WaterHeater"
+        }
+      ],
+      "title": "1 RK in Saket",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "ownerId": "3"
+    },
+    {
+      "id": "5401",
+      "type": "Building",
+      "shared": "true",
+      "address": "Janakpuri",
+      "squareFeet": 55,
+      "stay": "Short Term",
+      "rent": 8000,
+      "negotiable": false,
+      "perMonth": true,
+      "utilitiesIncluded": true,
+      "furnished": "false",
+      "amenities": [
+        {
+          "id": 1,
+          "name": "CarPark"
+        },
+        {
+          "id": 2,
+          "name": "WaterHeater"
+        },
+        {
+          "id": 3,
+          "name": "SecuritySystem"
+        }
+      ],
+      "title": "1 Rk in Janakpuri",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "ownerId": "3"
+    },
+    {
+      "id": "a3d4",
+      "type": "Building",
+      "shared": "true",
+      "address": "Chanakyapuri",
+      "squareFeet": 180,
+      "stay": "Long Term (6+ Months)",
+      "rent": 90000,
+      "negotiable": false,
+      "perMonth": true,
+      "utilitiesIncluded": true,
+      "furnished": "false",
+      "amenities": [
+        {
+          "id": 1,
+          "name": "CarPark"
+        },
+        {
+          "id": 2,
+          "name": "PowerBackup"
+        },
+        {
+          "id": 3,
+          "name": "WaterHeater"
+        }
+      ],
+      "title": "3 BHK in Chanakyapuri",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "ownerId": "3"
+    }
+  ],
+  "comments": [
+    {
+      "userId": "b4ab",
+      "username": "simran",
+      "propertyId": "8a65",
+      "message": "Interested",
+      "id": "33dd"
+    },
+    {
+      "userId": "b4ab",
+      "username": "simran",
+      "propertyId": "8a65",
+      "message": "Please Provide the contact details",
+      "id": "fee8"
+    },
+    {
+      "id": "67c1",
+      "message": "maybach",
+      "propertyId": "8a65",
+      "userId": "b4ab",
+      "username": "simran"
+    },
+    {
+      "id": "4179",
+      "message": "Please provide details.",
+      "propertyId": "eee3",
+      "userId": "b4ab",
+      "username": "user2"
+    },
+    {
+      "id": "af09",
+      "message": "Comment added",
+      "propertyId": "eee3",
+      "userId": "b4ab",
+      "username": "simran"
+    },
+    {
+      "id": "07e2",
+      "message": "Please provide contact details",
+      "propertyId": "eee3",
+      "userId": "b4ab",
+      "username": "simran"
+    },
+    {
+      "id": "c25f",
+      "message": "test",
+      "propertyId": "eee3",
+      "username": "test",
+      "userId": "17b0"
+    },
+    {
+      "id": "b9e7",
+      "message": "Interested",
+      "propertyId": "d090",
+      "username": "test",
+      "userId": "17b0"
+    },
+    {
+      "id": "0af9",
+      "message": "Commented",
+      "propertyId": "d090",
+      "username": "shubham",
+      "userId": "5513"
+    },
+    {
+      "id": "e4d1",
+      "message": "Comment added",
+      "propertyId": "7875",
+      "username": "shubham",
+      "userId": "5513"
+    },
+    {
+      "id": "a001",
+      "message": "Please provide contact details",
+      "propertyId": "a3d4",
+      "username": "shubham",
+      "userId": "5513"
+    },
+    {
+      "id": "fc70",
+      "message": "Comment added",
+      "propertyId": "a3d4",
+      "username": "shubham",
+      "userId": "5513"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+<div class="container create-form">
+    <h3 class="text-center fst-italic mb-5 heading">Please Enter Your Property Details</h3>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div>
+            <label class="fw-semibold heading">Choose Your Apartment/Building</label>
+            <select class="form-select" formControlName="type">
+                <option value="Apartment">Apartment</option>
+                <option value="Building">Building</option>
+            </select>
+            <div *ngIf="form.get('type')?.invalid && form.get('type')?.touched">
+                <small class="text" *ngIf="form.get('type')?.errors?.['required']">Please Select Apartment Type</small>
+            </div>
+        </div>
+        <label class="mt-3 mb-3 fw-semibold heading">Is this a Shared Property ?</label>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="shared" value="true">
+            <label class="form-check-label heading">
+                Yes
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" formControlName="shared" value="false" checked>
+            <label class="form-check-label heading">
+                No
+            </label>
+        </div>
+        <div *ngIf="form.get('shared')?.invalid && form.get('shared')?.touched">
+            <small class="text-danger" *ngIf="form.get('shared')?.errors?.['required']">Please Select an Option</small>
+        </div>
+        <div class="mb-3 mt-2">
+            <label for="exampleFormControlInput1" class="form-label fw-semibold heading">Property Location</label>
+            <input type="text" class="form-control" formControlName="address" placeholder="Enter Street address">
+            <div *ngIf="form.get('address')?.invalid && form.get('address')?.touched">
+                <small class="text-danger" *ngIf="form.get('address')?.errors?.['required']">Please Enter Street Address</small>
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col-auto mb-3">
+                <label for="exampleFormControlInput1" class="form-label fw-semibold heading">Property Details (SquareFeet)</label>
+                <input type="number" class="form-control" formControlName="squareFeet" placeholder="Enter area in square feet">
+                <div *ngIf="form.get('squareFeet')?.invalid && form.get('squareFeet')?.touched">
+                    <small class="text-danger" *ngIf="form.get('squareFeet')?.errors?.['required']">Please Enter area in square feet</small>
+                </div>
+            </div>
+            <div class="col-auto mx-5">
+                <label class="mb-2 fw-semibold heading">Stay/Lease Type</label>
+                <select class="form-select" formControlName="stay">
+                    <option value="Long Term (6+ Months)">Long Term (6+ Months)</option>
+                    <option value="Short Term">Short Term</option>
+                    <option value="Both">Both</option>
+                </select>
+                <div *ngIf="form.get('stay')?.invalid && form.get('stay')?.touched">
+                    <small class="text-danger" *ngIf="form.get('stay')?.errors?.['required']">Please Select Stay/Lease Type</small>
+                </div>
+            </div>
+            <div class="col-auto">
+                <label for="exampleFormControlInput1" class="form-label fw-semibold heading">Expected Rent</label>
+                <input type="number" class="form-control" formControlName="rent" placeholder="Enter expected rent">
+                <div *ngIf="form.get('rent')?.invalid && form.get('rent')?.touched">
+                    <small class="text-danger" *ngIf="form.get('rent')?.errors?.['required']">Please Enter expected rent</small>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="negotiable">
+                    <label class="form-check-label heading">Negotiable</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="perMonth">
+                    <label class="form-check-label heading">Per Month</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" formControlName="utilitiesIncluded">
+                    <label class="form-check-label heading">Utilities Included in Rent</label>
+                </div>
+            </div>
+            <div class="col-auto">
+                <label class="fw-semibold heading">Is the room/apartment furnished ?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" formControlName="furnished" value="true">
+                    <label class="form-check-label heading">Yes</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" formControlName="furnished" value="false" checked>
+                    <label class="form-check-label heading">No</label>
+                </div>
+                <div *ngIf="form.get('furnished')?.invalid && form.get('furnished')?.touched">
+                    <small class="text-danger" *ngIf="form.get('furnished')?.errors?.['required']">Please Select an Option</small>
+                </div>
+            </div>
+        </div>
+        <label class="fw-semibold heading">Amenities Included</label>
+        <div class="row g-3 mt-1" formGroupName="amenities">
+            <div class="form-check col-auto" *ngFor="let amenity of amenitiesList">
+                <input class="form-check-input" type="checkbox" [formControlName]="amenity">
+                <label class="form-check-label heading">{{ amenity | titlecase }}</label>
+            </div>
+        </div>
+
+        <h3 class="mt-4 heading">Description</h3>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label fw-semibold heading">Title</label>
+            <input type="text" class="form-control" formControlName="title" placeholder="Enter Your Ad Title">
+            <div *ngIf="form.get('title')?.invalid && form.get('title')?.touched">
+                <small class="text-danger" *ngIf="form.get('title')?.errors?.['required']">Please Enter Ad Title</small>
+            </div>
+            
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label fw-semibold heading">Description</label>
+            <textarea type="text" class="form-control" formControlName="description"
+                placeholder="Enter a detailed description with 1400 characters"></textarea>
+                <div *ngIf="form.get('description')?.invalid && form.get('description')?.touched">
+                    <small class="text-danger" *ngIf="form.get('description')?.errors?.['required']">Please Enter Description</small>
+                </div>
+        </div>
+    </form>
+    <button type="submit" class="btn btn-outline-success" (click)="onSubmit()">Preview</button>
+</div>

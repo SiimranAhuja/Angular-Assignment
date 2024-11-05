@@ -1,0 +1,10 @@
+<div class="mx-3">
+    <div class="d-flex justify-content-between">
+        <h2 class="fst-italic my-4">Welcome Back, {{user.username| titlecase}}</h2>
+        <div class="flex flex-direction-row my-4">
+            <button type="button" class="btn btn-outline-success p-2" (click)="addProperty()">Add Property</button>
+            <button type="button" class="btn btn-outline-danger p-2 mx-3" (click)="logout()">LogOut</button>
+        </div>
+    </div>
+    <app-listing [data]="data"></app-listing>
+</div>

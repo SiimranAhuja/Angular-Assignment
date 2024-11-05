@@ -1,0 +1,46 @@
+<div class="container authentication-form">
+    <h3 class="my-2 text-center">{{type === 'login' ? 'Login!' : 'Register!'}}</h3>
+    <form [formGroup]="form" (ngSubmit)="type === 'login' ? onLogin() : onRegister()">
+        @if(type !== 'login'){
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Name</label>
+            <input type="text" class="form-control" formControlName="username" placeholder="Enter your name" />
+            <div *ngIf="form.get('username')?.invalid && form.get('username')?.touched">
+                <small *ngIf="form.get('username')?.errors?.['required']">Username is required.</small>
+            </div>
+        </div>
+        <div class="my-3">
+            <label class="fw-semibold">Role</label>
+            <select class="form-select" formControlName="role">
+                <option value="tenant">Tenant</option>
+                <option value="owner">Owner</option>
+            </select>
+            <div *ngIf="form.get('role')?.invalid && form.get('role')?.touched">
+                <small *ngIf="form.get('role')?.errors?.['required']">Role is required.</small>
+            </div>
+        </div>
+        }
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Email</label>
+            <input type="text" class="form-control" formControlName="email" placeholder="Enter your email" />
+            <div *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+                <small *ngIf="form.get('email')?.errors?.['required']">Email is required.</small>
+                <small *ngIf="form.get('email')?.errors?.['email']">Invalid email format.</small>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Password</label>
+            <input type="text" class="form-control" formControlName="password" placeholder="Enter your password" />
+            <div *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+                <small *ngIf="form.get('password')?.errors?.['required']">Password is required.</small>
+                <small *ngIf="form.get('password')?.errors?.['minlength']">Password must be at least 6 characters long.</small>
+            </div>
+        </div>
+        @if(type === 'login'){
+        <button type="button" class="btn btn-outline-primary button" (click)="onLogin()">Login</button>
+        <p class="text-center my-3">If not a user, please click <a [routerLink]="['/authenticate', 'register']">here</a></p>
+        } @else {
+        <button type="button" class="btn btn-outline-primary button" (click)="onRegister()">Register</button>
+        }
+    </form>
+</div>

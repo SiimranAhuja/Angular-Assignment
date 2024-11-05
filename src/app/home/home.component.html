@@ -1,0 +1,30 @@
+<app-carousal></app-carousal>
+<div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-top: 2rem;">
+        <p class="text-header mt-2">All Listing!</p>
+        <form [formGroup]="form" style="max-width: 30rem; display: flex; gap: 1rem;">
+            <div>
+                <label class="fw-semibold heading">Choose Price Range</label>
+                <select class="form-select" formControlName="range">
+                    <option value="Less than 10000">Less than 10,000</option>
+                    <option value="10,000 - 20,000">10,000 - 20,000</option>
+                    <option value="20,000 - 50,000">20,000 - 50,000</option>
+                    <option value="50,000 - 1,00,000">50,000 - 1,00,000</option>
+                </select>
+            </div>
+            <div>
+                <label class="fw-semibold heading">Choose Location You're Looking For</label>
+                <select class="form-select" formControlName="location">
+                    <option value="Janakpuri">Janakpuri</option>
+                    <option value="Tilak Nagar">Tilak Nagar</option>
+                    <option value="Saket">Saket</option>
+                    <option value="Chanakyapuri">Chanakyapuri</option>
+                    <option value="Punjabi Bagh">Punjabi Bagh</option>
+                    <option value="Vasant Kunj">Vasant Kunj</option>
+                    <option value="Golf Links">Golf Links</option>
+                </select>
+            </div>
+        </form>
+    </div>
+    <app-listing [data]="filteredData"></app-listing>
+</div>

@@ -1,0 +1,13 @@
+.create-form {
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    max-width: 800px;
+    background-color: #03045E;
+}
+.heading {
+    color: white;
+    margin-bottom: 0.5rem;
+}

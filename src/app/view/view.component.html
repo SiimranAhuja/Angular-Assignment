@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="card mb-1" style="max-width: 650px;">
+        <img src="../../assets/images/apartment10.webp" class="card-img-top" alt="..." style="height: 300px;">
+        <div class="card-body">
+            <h5 class="card-title">{{data?.title}}</h5>
+            <p class="card-text">{{data?.description}}</p>
+            <div class="flex flex-direction-row my-4">
+                <a href="#" class="btn btn-primary" routerLink="">Go to Home Page</a>
+                <button type="button" *ngIf="user.role === 'owner'" class="btn btn-primary mx-2"
+                    (click)="onDelete()">Delete</button>
+            </div>
+        </div>
+    </div>
+    <div class="mb-2 centered-div mt-2">
+        <label for="exampleFormControlInput1" class="form-label fw-semibold heading">Comment</label>
+        <textarea type="text" class="form-control" [(ngModel)]="message"
+            placeholder="Please add your comment"></textarea>
+        <button type="button" class="btn btn-secondary my-2" style="float: right;" (click)="addComment()">Add
+            Comment</button>
+    </div>
+    <div *ngFor="let comment of commentData" class="centered-div mb-2">
+        <app-comment-section [data]="comment"></app-comment-section>
+    </div>
+</div>

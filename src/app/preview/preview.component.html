@@ -1,0 +1,85 @@
+<div class="container">
+    <h3 class="text-center mt-4">Preview and Submit</h3>
+    <div class="row mt-3 g-3 justify-content-center py-4">
+        <div class="col-sm-5 mb-3 mb-sm-0">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Property Type</h5>
+                    <p class="card-text card-data">{{formData.type}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Title of the Property (Adv)</h5>
+                    <p class="card-text card-data">{{formData.title}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Carpet Area</h5>
+                    <p class="card-text card-data">{{formData.squareFeet}} {{"square ft"}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Is the Property Furnished ?</h5>
+                    <p class="card-text card-data">{{formData.furnished === 'true' ? 'The Property is Furnished': 'The Property is not Furnished'}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Stay or Lease is for</h5>
+                    <p class="card-text card-data">{{formData.stay === 'Both' ? 'Both (Short Term as well as Long Term)': formData.stay}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Address</h5>
+                    <p class="card-text card-data">{{formData.address}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Property Details</h5>
+                    <p class="card-text card-data">Rent : {{formData.rent}} {{formData.perMonth ? 'per month': ''}} <small class="fst-italic">{{formData.negotiable ? 'Negotiable': ''}} {{formData.utilitiesIncluded ? 'And Utilities Included' : ''}}</small></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Description</h5>
+                    <p class="card-text card-data">{{formData.description}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5" style="margin-left: 21rem;">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title card-data">Amenities</h5>
+                    <ul>
+                        <li *ngFor="let amenity of formData.amenities">
+                            <p class="card-text card-data">{{amenity.name}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="image-gallery">
+        <img *ngFor="let image of images" [src]="image" alt="Gallery Image" class="gallery-image">
+    </div>
+    <button class="btn btn-outline-success my-3" (click)="onSubmit()">Submit</button>
+</div>
